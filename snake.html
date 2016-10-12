@@ -1,0 +1,205 @@
+<html>
+<head>
+    <title>snake</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('#info').modal('show');
+        });
+    </script>
+</head>
+
+<body>
+    <div class="title">
+        snake and ladder
+    </div>
+    <div class="gameArea">
+        <div class="row">
+            <div class="col-sm-2 nopadding tokens">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        Player tokens
+                    </div>
+                    <div class="panel-body">
+                        <div id="playerToken" class="winner">
+                            <img class='piece' src='piece_purple.png'> <span id="player1"></span>
+                            <br>
+                            <img class='piece' src='piece_yellow.png'> <span id="player2"></span>
+                            <br>
+                            <img class='piece' src='piece_red.png'> <span id="player3"></span>
+                            <br>
+                            <img class='piece' src='piece_green.png'> <span id="player4"></span>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <div id="nextName" class="nextChance">click on dice</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+            <div class="col-sm-6 nopadding board">
+                <div class="board">
+                    <table>
+                        <tr>
+                            <td id="25" value="0"></td>
+                            <td id="26" value="0"></td>
+                            <td id="27" value="-26"></td>
+                            <td id="28" value="0"></td>
+                            <td id="29" value="0"></td>
+                            <td id="30" value="0"></td>
+                        </tr>
+                        <tr>
+                            <td id="24" value="0"></td>
+                            <td id="23" value="0"></td>
+                            <td id="22" value="0"></td>
+                            <td id="21" value="-12"></td>
+                            <td id="20" value="9"></td>
+                            <td id="19" value="-12"></td>
+                        </tr>
+                        <tr>
+                            <td id="13" value="0"></td>
+                            <td id="14" value="0"></td>
+                            <td id="15" value="0"></td>
+                            <td id="16" value="0"></td>
+                            <td id="17" value="-13"></td>
+                            <td id="18" value="0"></td>
+                        </tr>
+                        <tr>
+                            <td id="12" value="0"></td>
+                            <td id="11" value="15"></td>
+                            <td id="10" value="0"></td>
+                            <td id="9" value="0"></td>
+                            <td id="8" value="0"></td>
+                            <td id="7" value="0"></td>
+                        </tr>
+                        <tr>
+                            <td id="1" value="0"></td>
+                            <td id="2" value="0"></td>
+                            <td id="3" value="19"></td>
+                            <td id="4" value="0"></td>
+                            <td id="5" value="3"></td>
+                            <td id="6" value="0"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+            <div class="col-sm-2 nopadding controls">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        Controls
+                    </div>
+                    <div class="panel-body box">
+                        <br>
+                        <div id="dice"><img src="images/dice1.jpg" title="click me"></div>
+                        <div id="showdice" class="value">click on dice</div>
+                        <hr>
+                        <div id="0">
+                            <img class='piece1' src='piece_purple.png'>
+                            <img class='piece1' src='piece_yellow.png'>
+                            <img class='piece1' src='piece_red.png'>
+                            <img class='piece1' src='piece_green.png'>
+                        </div>
+                        <hr>
+                        <a href="snake.html" class="btn btn-info btn-block">play again <span class="glyphicon glyphicon-repeat"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-info">
+                    <a href="#" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove-circle"></span></a>
+                    <h1><i class="glyphicon glyphicon-th-list"></i>Instructions</h1>
+                </div>
+                <div class="modal-body modals">
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            1. Enter player names.
+                            <br> 2. Click ok.
+                            <br> 3. Click on dice to get value.
+                        </div>
+                        <div class="col-md-6">
+                            <div id="boxGroup">
+                                <input type="text" class="text" id="box1" placeholder="player 1" maxlength="8">
+                                <br>
+                                <input type="text" id="box2" class="text" placeholder="player 2" maxlength="8">
+                                <br>
+                            </div>
+                            <div id="buttonGroup">
+                                <a href="#" class="btn btn-info" id="add">add <span class="glyphicon glyphicon-plus-sign"></span></a>
+                                <a href="#" class="btn btn-info" id="remove">remove<span class="glyphicon glyphicon-minus-sign"></span></a>
+                                <a href="#" class="btn btn-info" id="start">ok<span class="glyphicon glyphicon-ok"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success pull-right" style="display:none" id="playButton" data-dismiss="modal">start<span class="glyphicon glyphicon-play"></span></button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <!-- Modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="winner" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-info">
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>-->
+                    <a href="#" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove-circle"></span></a>
+                    <h1><i class="glyphicon glyphicon-thumbs-up"></i>Congratulation</h1>
+                </div>
+                <div class="modal-body">
+                    <span id="winnername">fgfd</span>&nbsp; won the match.
+                </div>
+                <div class="modal-footer">
+                    <a href="snake.html" class="btn btn-success pull-right">restart <span class="glyphicon glyphicon-repeat"></span></a>
+
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <!-- Modal -->
+
+    <div class="footer">
+        <div class="pull-center by">
+            code by: umesh kumar dhakar
+        </div>
+    </div>
+    <audio id="cheers">
+        <source src="sounds/cheers.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="play">
+        <source src="sounds/audio.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="plus">
+        <source src="sounds/ladder.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="minus">
+        <source src="sounds/bite.mp3" type="audio/mpeg">
+    </audio>
+</body>
+
+</html>
