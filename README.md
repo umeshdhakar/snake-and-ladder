@@ -2,4 +2,4 @@
  
 ###  my first game using jquery and javascript.
  
-[click here](http://www.trybuddy.net/game/) to play online.
+[click here](https://umeshdhakar.github.io/snake-and-ladder/) to play.
