@@ -1,12 +1,13 @@
 <html>
 <head>
-    <title>snake</title>
+    <title>Snake & Ladder</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="piece_yellow.png" type="image/png" />
     <script type="text/javascript">
         $(window).load(function() {
             $('#info').modal('show');
@@ -16,14 +17,14 @@
 
 <body>
     <div class="title">
-        snake and ladder
+        Snake & Ladder
     </div>
     <div class="gameArea">
         <div class="row">
             <div class="col-sm-2 nopadding tokens">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        Player tokens
+                        Game Pieces
                     </div>
                     <div class="panel-body">
                         <div id="playerToken" class="winner">
@@ -39,7 +40,7 @@
                         </div>
                     </div>
                     <div class="panel-footer">
-                        <div id="nextName" class="nextChance">click on dice</div>
+                        <div id="nextName" class="nextChance">Click on dice to start game</div>
                     </div>
                 </div>
             </div>
@@ -101,7 +102,7 @@
                     <div class="panel-body box">
                         <br>
                         <div id="dice"><img src="images/dice1.jpg" title="click me"></div>
-                        <div id="showdice" class="value">click on dice</div>
+                        <div id="showdice" class="value">Click above dice</div>
                         <hr>
                         <div id="0">
                             <img class='piece1' src='piece_purple.png'>
@@ -110,7 +111,7 @@
                             <img class='piece1' src='piece_green.png'>
                         </div>
                         <hr>
-                        <a href="snake.html" class="btn btn-info btn-block">play again <span class="glyphicon glyphicon-repeat"></span></a>
+                        <a href="snake.html" class="btn btn-info btn-block">Play Again <span class="glyphicon glyphicon-repeat"></span></a>
                     </div>
                 </div>
             </div>
@@ -127,10 +128,10 @@
                 <div class="modal-body modals">
                     <div class="row">
                         <div class="col-md-6">
-
-                            1. Enter player names.
-                            <br> 2. Click ok.
-                            <br> 3. Click on dice to get value.
+                            1. Enter Player Names.
+                            <br> 2. Add or Remove Players.
+                            <br> 3. Click on Confirm button.
+                            <br> 4. Click on Start button.
                         </div>
                         <div class="col-md-6">
                             <div id="boxGroup">
@@ -140,15 +141,15 @@
                                 <br>
                             </div>
                             <div id="buttonGroup">
-                                <a href="#" class="btn btn-info" id="add">add <span class="glyphicon glyphicon-plus-sign"></span></a>
-                                <a href="#" class="btn btn-info" id="remove">remove<span class="glyphicon glyphicon-minus-sign"></span></a>
-                                <a href="#" class="btn btn-info" id="start">ok<span class="glyphicon glyphicon-ok"></span></a>
+                                <a href="#" class="btn btn-info" id="add">Add <span class="glyphicon glyphicon-plus-sign"></span></a>
+                                <a href="#" class="btn btn-info" id="remove">Remove <span class="glyphicon glyphicon-minus-sign"></span></a>
+                                <a href="#" class="btn btn-info" id="start">Confirm? <span class="glyphicon glyphicon-ok"></span></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success pull-right" style="display:none" id="playButton" data-dismiss="modal">start<span class="glyphicon glyphicon-play"></span></button>
+                    <button type="button" class="btn btn-success pull-right" style="display:none" id="playButton" data-dismiss="modal">Start<span class="glyphicon glyphicon-play"></span></button>
                 </div>
             </div>
             <!-- /.modal-content -->
@@ -169,10 +170,10 @@
                     <h1><i class="glyphicon glyphicon-thumbs-up"></i>Congratulation</h1>
                 </div>
                 <div class="modal-body">
-                    <span id="winnername">fgfd</span>&nbsp; won the match.
+                    <span id="winnername">fgfd</span>&nbsp; won the Game.
                 </div>
                 <div class="modal-footer">
-                    <a href="index.html" class="btn btn-success pull-right">restart <span class="glyphicon glyphicon-repeat"></span></a>
+                    <a href="index.html" class="btn btn-success pull-right">Restart <span class="glyphicon glyphicon-repeat"></span></a>
 
                 </div>
             </div>
@@ -185,7 +186,7 @@
 
     <div class="footer">
         <div class="pull-center by">
-            code by: umesh kumar dhakar
+            Developed by: Umesh Kumar Dhakar
         </div>
     </div>
     <audio id="cheers">
